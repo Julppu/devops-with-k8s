@@ -1,0 +1,12 @@
+~ exercise01 kubectl create deployment rest-generator --image=julppu/rest-with-devops:1.01
+deployment.apps/rest-generator created
+~ exercise01 kubectl get deployments
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+rest-generator   1/1     1            1           39s
+~ exercise01 kubectl get pods
+NAME                             READY   STATUS    RESTARTS   AGE
+rest-generator-9947ffc97-h8vcr   1/1     Running   0          50s
+~ exercise01 kubectl logs -f rest-generator-9947ffc97-h8vcr
+2021-04-28T10:35:36Z: XVlBzgbaiC
+2021-04-28T10:35:41Z: MRAjWwhTHc
+2021-04-28T10:35:46Z: tcuAxhxKQF
