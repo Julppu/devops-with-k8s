@@ -1,0 +1,10 @@
+~ exercise03 kubectl apply -f https://raw.githubusercontent.com/Julppu/rest-with-k8s/master/manifests/deployment.yaml
+deployment.apps/rest-basic created
+~ exercise03 kubectl get deployments
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE
+rest-basic   1/1     1            1           8s
+~ exercise03 kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+rest-basic-5497fdb8b-456sx   1/1     Running   0          12s
+~ exercise03 kubectl logs -f rest-basic-5497fdb8b-456sx
+Server started in port NNNN
