@@ -1,0 +1,10 @@
+~ exercise05 kubectl apply -f https://raw.githubusercontent.com/Julppu/rest-with-k8s/master/manifests/deployment.yaml
+deployment.apps/rest-server created
+NAME                           READY   STATUS    RESTARTS   AGE
+rest-server-687dc678b4-56jfg   1/1     Running   0          43s
+~ exercise05 kubectl port-forward rest-server-687dc678b4-56jfg 3003:3000
+Forwarding from 127.0.0.1:3003 -> 3000
+Forwarding from [::1]:3003 -> 3000
+Handling connection for 3003
+~ exercise05 curl -X GET http://localhost:3003
+Server operational!%
